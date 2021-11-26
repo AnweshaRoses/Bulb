@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn me on</title>
+    <style>
+        body{
+            background-color: black
+        }
+        body h1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        h1 span{
+            margin-left: 12px;
+            color: crimson;
+        }
+        .center{
+            display: block;
+            margin-top: 81px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn{
+            padding: 15px;
+            border-radius: 6px;
+            background-color:burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h1>You woke up and chose <span>violence</span> </h1>
+    <img id="bulb" src="./img/index.jpg" alt="" class="center">
+    <button id="toggle" class="center btn">Turn on</button>
+
+    <script>
+        let btn=document.getElementById('toggle')
+        let bulb=document.getElementById('bulb')
+        btn.addEventListener('click',togglebulb)
+        function togglebulb(e){
+            if(btn.textContent.includes('on')){
+                bulb.src="./img/bulbl1.jpg"
+                btn.textContent="Turn off"
+            }
+            else{
+                bulb.src="./img/index.jpg"
+                btn.textContent="Turn on"
+            }
+        }
+    </script>
+</body>
+</html>
